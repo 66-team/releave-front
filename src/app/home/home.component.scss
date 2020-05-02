@@ -1,7 +1,8 @@
 @import './../../assets/scss/colors.scss';
 
 .maincontentdiv {
-    height: 503px;
+    height: 100%;
+    width: 100%;
     iframe{
         height: 100%;
         border-radius: 30px;
@@ -17,4 +18,33 @@ section{
         font-size: 5rem;
         color: map-get($colors, primary);
     }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-slide.swiper-slide-prev, .swiper-slide.swiper-slide-next{
+    height: 403px;
+}
+
+.swiper-slide{
+    height: 503px;
+    min-height: 100%;
+}
+
+fa-icon{
+    font-size: 5rem;
+    padding: 0 5rem;
+    color: #fff;
 }
