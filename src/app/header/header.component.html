@@ -1,7 +1,38 @@
 <header>
-    <img src="./../../assets/img/ReleaveIconeBranco.svg" alt="">
-    <nav>
-        <a href="">Início</a>
-        <a href="">Categorias</a>
-    </nav>
+    <div menu>
+        <img src="./../../assets/img/ReleaveIconeBranco.svg" alt="">
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Início</a>
+                </li>
+                <li>
+                    <a href="">Categorias</a>
+                </li>
+                <li>
+                    <a href="">Login</a>
+                </li>
+                <li>
+                    <a href="">Registrar-se</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div hamburger (click)="toggle()" [ngClass]="{'open': isOpen}">
+        <div bar="1"></div>
+        <div bar="2"></div>
+        <div bar="3"></div>
+    </div>
 </header>
+<div subMenu *ngIf="isOpen">
+    <nav>
+        <ul>
+            <li>
+                <a href="">Início</a>
+            </li>
+            <li>
+                <a href="">Categorias</a>
+            </li>
+        </ul>
+    </nav>
+</div>
