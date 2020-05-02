@@ -1,0 +1,16 @@
+@import './../../../assets/scss/colors.scss';
+
+button{
+    padding: 1rem 3rem;
+    width: 100%;
+    background-color: map-get($colors, primary);
+    border: none;
+    border-radius: .5rem;
+    color: map-get($colors, secondary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    fa-icon{
+        color: map-get($colors, secondary);
+    }
+}

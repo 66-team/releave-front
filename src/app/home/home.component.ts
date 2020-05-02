@@ -1,14 +1,14 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 import Swiper from 'swiper';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild('swiper') swiper: ElementRef; 
+export class HomeComponent implements OnInit {
   navigation = {
     right: faChevronCircleRight,
     left: faChevronCircleLeft
@@ -24,9 +24,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       prevEl: '.swiper-button-prev',
     },
     scrollbar: false
-  }
+  };
 
-  constructor(private renderer2: Renderer2, private elem: ElementRef) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     const swiper = new Swiper('.swiper-container', { 
@@ -44,7 +44,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ngAfterViewInit() {
+  selectLive() {
+    console.log('teste');
+    
+    this.router.navigate(['user']);
   }
 
 }

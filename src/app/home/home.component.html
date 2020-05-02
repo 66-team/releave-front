@@ -1,24 +1,15 @@
 <section>
-    <h1>Lorem Ipsum has been the industry's</h1>
+    <h1>A experiência da loja física no mundo virtual.</h1>
+    <h2>Escolha a loja, converse com o vendedor ao vivo e compre sem sair de casa.</h2>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div tabindex="0" class="maincontentdiv">
-                    <iframe src="https://www.youtube.com/embed/sqaZ_dHnHYg" frameborder="0"></iframe>
-                </div>
-                <!-- <div class="notification">
-                    <h2>Nova coleção Mormaii</h2>
-                    <p>Lorem Ipsum has been the oldet industry's standard dummy laa.</p>
-                    <span>
-                        <p>1.208 views</p>
-                        <p>Participar</p>
-                    </span>
-                </div> -->
+                <app-live [url]="'https://www.youtube.com/embed/sqaZ_dHnHYg'"></app-live>
+                <app-notification></app-notification>
+                <a link [routerLink]="['user']"></a>
             </div>
             <div class="swiper-slide">
-                <div tabindex="0" class="maincontentdiv">
-                    <iframe src="https://www.youtube.com/embed/j5VbNJVplFk?controls=0" frameborder="0"></iframe>
-                </div>
+                <app-live [url]="'https://www.youtube.com/embed/j5VbNJVplFk?controls=0'"></app-live>
             </div>
         </div>
         <fa-icon [icon]="navigation.right" class="swiper-button-next"></fa-icon>
