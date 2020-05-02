@@ -53,9 +53,9 @@ ul{
 }
 
 [hamburger] {
+    display: flex;
     width: 5rem;
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-self: flex-end;
@@ -63,6 +63,9 @@ ul{
     margin-right: 2rem;
     box-sizing: border-box;
     position: relative;
+    @media (min-width: 768px) {
+        display: none;
+    }
     [bar] {
         position: absolute;
         border-radius: 1rem;
