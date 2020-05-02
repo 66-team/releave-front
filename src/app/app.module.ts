@@ -9,6 +9,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { HeaderComponent } from './header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -23,7 +24,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    FontAwesomeModule
   ],
   providers: [
     {

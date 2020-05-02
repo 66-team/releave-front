@@ -1,12 +1,29 @@
+@import './../../assets/scss/colors.scss';
+
 header {
     height: 6.3rem;
+    background-color: map-get($colors, primary);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
     img {
-        width: auto;
+        max-width: 100%;
+        height: auto;
+        position: relative;
     }
     nav {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        a{
+            font-size: 2.6rem;
+            color: map-get($colors, secondary);
+            text-decoration: none;
+            padding: 0 2.5rem;
+        }
     }
 }
