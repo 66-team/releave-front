@@ -1,9 +1,10 @@
 <app-simple-card>
     <h2>Blazer Acinturado Acetinado</h2>
     <form [formGroup]="cartForm" (ngSubmit)="submit()">
-        <p>Quantidade:</p>
-        <app-c-input [custom]="custom"></app-c-input>
-        <app-color [colors]="['#F0B27C', '#7754DA', '#A81E1E', '#000000']"></app-color>
+        <app-color [colors]="['#F0B27C', '#7754DA', '#A81E1E', '#000000']" formControlName="color"></app-color>
+        <ng-container *ngFor="let custom of customList">
+            <app-c-input [formControlName]="custom.name" [custom]="custom"></app-c-input>
+        </ng-container>
         <app-button (act)="submit()">
             Concluir
         </app-button>

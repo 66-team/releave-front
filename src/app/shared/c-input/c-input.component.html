@@ -1,1 +1,6 @@
-<input [type]="custom.type" [placeholder]="custom.placeholder" [formControlName]="custom.formControl">
+<input
+    [type]="custom.type"
+    [placeholder]="custom.placeholder"
+    [name]="custom.name"
+    [value]="value"
+    (input)="onChange($event.target.value)">

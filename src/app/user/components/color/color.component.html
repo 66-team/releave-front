@@ -1,4 +1,4 @@
 <h1>Cores</h1>
 <div colorWrapper>
-    <div color *ngFor="let color of colors; let i = index;" [ngStyle]="{'background-color': color}"></div>
+    <div (click)="onTouched(); choose(color);" color *ngFor="let color of colors; let i = index;" [ngStyle]="{'background-color': color}"></div>
 </div>
