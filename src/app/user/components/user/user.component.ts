@@ -1,13 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute, Router } from '@angular/router';
+import { merge } from 'rxjs';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  styleUrls: ['./user.component.scss'],
+  animations: [
+    trigger(
+      'inOut', [
+        transition(
+          ':enter',
+          [
+            style({ left: '-100%', opacity: 0.5 }),
+            animate('1s', style({ left: 0, opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave',
+          [
+            style({ left: 0, opacity: 1 }),
+            animate('500ms', style({ left: '100%', opacity: 0.5 }))
+          ]
+        )
+      ]
+    )
+  ]
 })
 export class UserComponent implements OnInit {
   cart = faCartPlus;
+  productId: string;
   description = {
     title: 'Descrição',
     text: 'O blazer com corte clássico de alfaiataria é a peça curinga que veio para ficar no guarda-roupa feminino, sendo capaz de transformar qualquer produção básica em um look moderno e elegante.',
@@ -17,9 +41,24 @@ export class UserComponent implements OnInit {
       'https://s3-alpha-sig.figma.com/img/439d/7521/cdbc5808181d664cdf3dbaa551b02866?Expires=1589155200&Signature=JMlNy6VNWAHTeDqXE2khRemidzoR2rpwOUfKxD39iy7Krtlh~0WtZtMPgzQp0aMFyAd9sFfVc1D8aJBAJ9Lu8-s3KpI~Pea5EhIoRxTty5yxWDqmGPH3fbdIVfrLPdg4MpaMWmFKWgW7NJR5n0vtLqSx4M2j3azm2yqGDQiTx-LxgGAY-xaiZrMuqxLrWX7~krY8KtBu6~JvqTx4g~RWJaKQxD~UY3u-zMpzYSNy4h7v2RP8T0nTGGHc5ZvUXOVoKlZd3IwfUX76hBQJjJlbLI4okxQsHNmqsCwoHZrBRJP8c9RnCHjS1W9fJ3LyJZmx7c~tlW0tMXMKLabOb92AGw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
     ]};
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.productId = params.prodId;
+    });
+  }
+
+  addCart(id: string){
+    const queryParams = {
+      prodId: id
+    };
+
+    this.router.navigate([], {
+      relativeTo: this.activatedRoute,
+      queryParams,
+      queryParamsHandling: 'merge'
+    });
   }
 
 }

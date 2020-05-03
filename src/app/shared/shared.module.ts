@@ -8,6 +8,8 @@ import { SimpleCardComponent } from './simple-card/simple-card.component';
 import { ButtonComponent } from './button/button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotificationComponent } from './notification/notification.component';
+import { CInputComponent } from './c-input/c-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,10 +19,12 @@ import { NotificationComponent } from './notification/notification.component';
     SafePipe,
     SimpleCardComponent,
     ButtonComponent,
-    NotificationComponent
+    NotificationComponent,
+    CInputComponent
   ],
   imports: [
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   exports: [
     LiveComponent,
@@ -28,7 +32,9 @@ import { NotificationComponent } from './notification/notification.component';
     SimpleCardComponent,
     ButtonComponent,
     FontAwesomeModule,
-    NotificationComponent
+    NotificationComponent,
+    CInputComponent,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

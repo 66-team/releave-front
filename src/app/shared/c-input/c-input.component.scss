@@ -1,0 +1,9 @@
+@import './../../../assets/scss/colors.scss';
+
+input{
+    background-color: map-get($colors, secondary);
+    border-radius: 2.4rem;
+    padding: 2rem 3rem 2rem 2rem;
+    border: none;
+    color: map-get($colors, textTertiary);
+}

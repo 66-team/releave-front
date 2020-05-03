@@ -1,8 +1,11 @@
 <app-simple-card>
     <h2>Blazer Acinturado Acetinado</h2>
-    <p>Quantidade</p>
-    <p>Cor</p>
-    <app-button>
-        Concluir
-    </app-button>
+    <form [formGroup]="cartForm" (ngSubmit)="submit()">
+        <p>Quantidade:</p>
+        <app-c-input [custom]="custom"></app-c-input>
+        <app-color [colors]="['#F0B27C', '#7754DA', '#A81E1E', '#000000']"></app-color>
+        <app-button (act)="submit()">
+            Concluir
+        </app-button>
+    </form>
 </app-simple-card>

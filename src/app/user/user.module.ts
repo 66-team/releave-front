@@ -31,7 +31,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     UserRoutingModule,
     SharedModule,
     SocketIoModule.forRoot(config),
-    FormsModule
+    FormsModule,
   ],
   providers: [
     ChatService
