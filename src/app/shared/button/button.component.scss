@@ -10,6 +10,12 @@ button{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media (min-width: 768px) {
+        justify-content: center;
+        fa-icon{
+            padding-left: 1rem;
+        }
+    }
     fa-icon{
         color: map-get($colors, secondary);
     }

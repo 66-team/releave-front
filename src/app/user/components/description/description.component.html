@@ -1,12 +1,13 @@
-<h3>Descrição</h3>
-<p>O blazer com corte clássico de alfaiataria é a peça curinga que veio para ficar no guarda-roupa feminino, sendo capaz de transformar qualquer produção básica em um look moderno e elegante.</p>
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
+<section>
+    <h3>{{ content.title }}</h3>
+    <p>{{ content.text }}</p>
+    <div class="swiper-container" *ngIf="content.pics.length > 0">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let img of content.pics">
+                <img [src]="img" alt="">
+            </div>
         </div>
-        <div class="swiper-slide">
-        </div>
+        <fa-icon [icon]="navigation.right" class="swiper-button-next"></fa-icon>
+        <fa-icon [icon]="navigation.left" class="swiper-button-prev"></fa-icon>
     </div>
-    <fa-icon [icon]="navigation.right" class="swiper-button-next"></fa-icon>
-    <fa-icon [icon]="navigation.left" class="swiper-button-prev"></fa-icon>
-</div>
+</section>

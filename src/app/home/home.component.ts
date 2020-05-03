@@ -13,23 +13,11 @@ export class HomeComponent implements OnInit {
     right: faChevronCircleRight,
     left: faChevronCircleLeft
   };
-  config = {
-    direction: 'horizontal',
-    slidesPerView: 1.5,
-    loop: false,
-    spaceBetween: 30,
-    centeredSlides: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: false
-  };
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    const swiper = new Swiper('.swiper-container', { 
+    const swiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       slidesPerView: 1.5,
       loop: false,
@@ -45,8 +33,6 @@ export class HomeComponent implements OnInit {
   }
 
   selectLive() {
-    console.log('teste');
-    
     this.router.navigate(['user']);
   }
 

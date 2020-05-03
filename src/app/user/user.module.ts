@@ -10,6 +10,9 @@ import { TitleComponent } from './components/title/title.component';
 import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 import { ChatComponent } from './components/chat/chat.component';
 import { ChatService } from '../shared/chat/chat.service';
+import { ColorComponent } from './components/color/color.component';
+import { CartComponent } from './components/cart/cart.component';
+import { SizeComponent } from './components/size/size.component';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -18,7 +21,10 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     UserComponent,
     DescriptionComponent,
     TitleComponent,
-    ChatComponent
+    ChatComponent,
+    ColorComponent,
+    CartComponent,
+    SizeComponent
   ],
   imports: [
     CommonModule,

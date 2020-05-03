@@ -1,6 +1,15 @@
+@import './../../../../assets/scss/colors.scss';
+
 [user]{
     padding: 10rem 2rem 5rem 2rem;
+    background-color: map-get($colors, bg);
     [liveWrapper] {
-        height: 50rem;
+        height: 52rem;
+        @media (min-width: 768px) {
+            height: 72rem;
+        }
+        @media (min-width: 1280px) {
+            height: 88rem;
+        }
     }
 }

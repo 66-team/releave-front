@@ -1,14 +1,15 @@
 <section user>
-    <app-title></app-title>
+    <app-title [title]="{channel: 'Aquarella Modas', name: 'Fabiana Souza', img: ''}"></app-title>
     <div liveWrapper>
         <app-live [url]="'https://www.youtube.com/embed/sqaZ_dHnHYg'"></app-live>
     </div>
     <app-simple-card>
-        <app-description></app-description>
+        <app-description [content]="description"></app-description>
+        <app-color [colors]="['#F0B27C', '#7754DA', '#A81E1E', '#000000']"></app-color>
+        <app-size [sizes]="['P', 'M', 'G', 'GG']"></app-size>
     </app-simple-card>
     <app-button>
         Adicionar ao carrinho
         <fa-icon [icon]="cart"></fa-icon>
     </app-button>
-    <app-chat></app-chat>
 </section>

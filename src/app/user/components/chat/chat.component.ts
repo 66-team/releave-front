@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from 'src/app/shared/chat/chat.service';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-chat',
@@ -9,6 +10,7 @@ import { ChatService } from 'src/app/shared/chat/chat.service';
 export class ChatComponent implements OnInit {
   newMessage: string;
   messageList = [];
+  icon = faPaperPlane;
 
   constructor(private chat: ChatService) { }
 

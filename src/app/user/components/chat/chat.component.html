@@ -6,5 +6,5 @@
         </p>
     </div>
     <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" type="text">
-    <button (click)="sendMessage()">Send Message</button>
+    <fa-icon [icon]="icon" (click)="sendMessage()"></fa-icon>
 </section>
