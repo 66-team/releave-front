@@ -30,3 +30,9 @@ p{
     margin: 0;
     padding: 1rem;
 }
+
+fa-icon{
+    font-size: 5rem;
+    padding: 0 5rem;
+    color: map-get($colors, secondary);
+}

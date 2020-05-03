@@ -1,0 +1,10 @@
+<section>
+    <h2>Comentários</h2>
+    <div message *ngFor="let message of messageList">
+        <p>
+            {{ message }}
+        </p>
+    </div>
+    <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" type="text">
+    <button (click)="sendMessage()">Send Message</button>
+</section>
