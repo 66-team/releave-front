@@ -1,0 +1,22 @@
+[optionWrapper] {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    figure{
+        margin: 1rem;
+        background-color: #27282B;
+        height: 256px;
+        border-radius: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        figcaption{
+            padding-top: 1rem;
+            color: #fff;
+            font-size: 1.4rem;
+        }
+    }
+}

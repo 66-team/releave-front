@@ -11,6 +11,7 @@ import { LogoComponent } from './logo/logo.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignInService } from './services/sign-in/sign-in.service';
+import { SellerOptionsComponent } from './seller-options/seller-options.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SignInService } from './services/sign-in/sign-in.service';
     NotificationComponent,
     CInputComponent,
     LogoComponent,
-    StepperComponent
+    StepperComponent,
+    SellerOptionsComponent
   ],
   imports: [
     FontAwesomeModule,
@@ -38,7 +40,8 @@ import { SignInService } from './services/sign-in/sign-in.service';
     CInputComponent,
     ReactiveFormsModule,
     LogoComponent,
-    StepperComponent
+    StepperComponent,
+    SellerOptionsComponent
   ],
   providers: [
     SignInService

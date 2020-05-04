@@ -30,7 +30,8 @@ export class SignInComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private signInService: SignInService) { }
+    private signInService: SignInService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({});
@@ -54,6 +55,7 @@ export class SignInComponent implements OnInit {
 
   submit(){
     this.signInService.login();
+    this.router.navigate(['../home'], { relativeTo: this.route.parent });
   }
 
 }
