@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotificationComponent } from './notification/notification.component';
 import { CInputComponent } from './c-input/c-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LogoComponent } from './logo/logo.component';
 
 
 
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SimpleCardComponent,
     ButtonComponent,
     NotificationComponent,
-    CInputComponent
+    CInputComponent,
+    LogoComponent
   ],
   imports: [
     FontAwesomeModule,
@@ -34,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     NotificationComponent,
     CInputComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LogoComponent
   ]
 })
 export class SharedModule { }

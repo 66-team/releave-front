@@ -1,1 +1,14 @@
-<p>sign-in works!</p>
+<section>
+    <app-logo></app-logo>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+        <div inputWrapper *ngFor="let loginField of loginFields">
+            <app-c-input [formControlName]="loginField.name" [custom]="loginField"></app-c-input>
+        </div>
+        <div btnWrapper>
+            <app-button color="primary">
+                Entrar
+            </app-button>
+        </div>
+        <p>Esqueceu a senha? <a routerLink="../signIn">Redefinir</a></p>
+    </form>
+</section>
