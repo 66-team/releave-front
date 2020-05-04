@@ -5,7 +5,7 @@
             <app-c-input [formControlName]="loginField.name" [custom]="loginField"></app-c-input>
         </div>
         <div btnWrapper>
-            <app-button color="primary">
+            <app-button (click)="submit()" color="primary">
                 {{ recoverPwd ? 'Redefinir senha' : 'Entrar' }}
             </app-button>
         </div>

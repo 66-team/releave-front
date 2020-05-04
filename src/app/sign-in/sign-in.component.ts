@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { take } from 'rxjs/operators';
+import { SignInService } from '../shared/services/sign-in/sign-in.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -26,7 +27,10 @@ export class SignInComponent implements OnInit {
   ];
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private signInService: SignInService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({});
@@ -49,7 +53,7 @@ export class SignInComponent implements OnInit {
   }
 
   submit(){
-    console.log(this.loginForm.value);
+    this.signInService.login();
   }
 
 }

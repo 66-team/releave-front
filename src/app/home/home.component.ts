@@ -18,17 +18,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     const swiper = new Swiper('.swiper-container', {
-      direction: 'horizontal',
-      slidesPerView: 1.5,
+      slidesPerView: 1,
       loop: false,
-      initialSlide: 1,
       spaceBetween: 30,
       centeredSlides: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
-      scrollbar: false
     });
   }
 

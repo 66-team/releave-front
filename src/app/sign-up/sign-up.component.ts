@@ -8,7 +8,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +21,10 @@ export class SignUpComponent implements OnInit {
 
   customer() {
     this.router.navigate(['./register', 'cpf'], { relativeTo: this.route.parent });
+  }
+
+  signIn() {
+    this.router.navigate(['../signIn'], { relativeTo: this.route.parent });
   }
 
 }
