@@ -2,7 +2,7 @@
 
 header {
     height: 6.3rem;
-    background-color: map-get($colors, primary);
+    background-color: map-get($colors, background);
     position: fixed;
     top: 0;
     width: 100%;
@@ -106,7 +106,7 @@ ul{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: map-get($colors, primary);
+    background-color: map-get($colors, background);
     z-index: 999;
     nav {
         width: 100%;
