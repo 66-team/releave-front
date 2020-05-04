@@ -11,6 +11,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { CInputComponent } from './c-input/c-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
+import { StepperComponent } from './stepper/stepper.component';
 
 
 
@@ -22,7 +23,8 @@ import { LogoComponent } from './logo/logo.component';
     ButtonComponent,
     NotificationComponent,
     CInputComponent,
-    LogoComponent
+    LogoComponent,
+    StepperComponent
   ],
   imports: [
     FontAwesomeModule,
@@ -37,7 +39,8 @@ import { LogoComponent } from './logo/logo.component';
     NotificationComponent,
     CInputComponent,
     ReactiveFormsModule,
-    LogoComponent
+    LogoComponent,
+    StepperComponent
   ]
 })
 export class SharedModule { }
