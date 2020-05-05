@@ -1,12 +1,12 @@
 <section>
     <app-logo></app-logo>
-    <app-stepper></app-stepper>
+    <!-- <app-stepper></app-stepper> -->
     <form [formGroup]="registerForm" (ngSubmit)="submit()">
         <div inputWrapper *ngFor="let reg of regList">
             <app-c-input [formControlName]="reg.name" [custom]="reg"></app-c-input>
         </div>
         <div btnWrapper>
-            <app-button color="primary">
+            <app-button (click)="submit()" color="primary">
                 Próximo
             </app-button>
         </div>

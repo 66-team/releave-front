@@ -130,9 +130,8 @@ export class RegisterComponent implements OnInit {
       case 'cnpj':
         this.regList = this.cnpjFields;
         break;
-      case 'address':
-        this.regList = this.addresFields;
     }
+    this.regList = [...this.regList, ...this.addresFields]
     this.registerForm = this.fb.group({});
     this.regList.map(custom => {
       this.registerForm.addControl(custom.name, custom.formControl);
@@ -140,7 +139,11 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.registerForm.value);
+    if (this.type === 'cnpj') {
+      this.router.navigate(['../home'], { queryParams: { user: 'cnpj' }, relativeTo: this.route.parent });
+    } else {
+      this.router.navigate(['../home'], { queryParams: { user: 'cpf' }, relativeTo: this.route.parent });
+    }
   }
 
 }

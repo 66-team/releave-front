@@ -17,6 +17,6 @@
     </div>
 
     <div seller>
-        <app-seller-options></app-seller-options>
+        <app-seller-options [opts]="optList" (action)="toolChoose($event)"></app-seller-options>
     </div>
 </section>

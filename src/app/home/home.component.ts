@@ -13,6 +13,18 @@ export class HomeComponent implements OnInit {
     right: faChevronCircleRight,
     left: faChevronCircleLeft
   };
+  optList = [
+    {
+      img: './../../assets/img/cam.svg',
+      description: 'Começar uma live',
+      action: 'live'
+    },
+    {
+      img: './../../assets/img/add.svg',
+      description: 'Cadastrar produtos',
+      action: 'addProd'
+    }
+  ];
 
   constructor(private router: Router) { }
 
@@ -31,6 +43,10 @@ export class HomeComponent implements OnInit {
 
   selectLive() {
     this.router.navigate(['user']);
+  }
+
+  toolChoose(event) {
+    console.log(event);
   }
 
 }

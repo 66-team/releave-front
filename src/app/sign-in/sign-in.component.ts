@@ -55,7 +55,7 @@ export class SignInComponent implements OnInit {
 
   submit(){
     this.signInService.login();
-    this.router.navigate(['../home'], { relativeTo: this.route.parent });
+    this.router.navigate(['../home'], { queryParams: { user: 'cnpj' }, relativeTo: this.route.parent });
   }
 
 }

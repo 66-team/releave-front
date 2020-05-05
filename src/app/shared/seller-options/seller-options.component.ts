@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-seller-options',
@@ -6,20 +6,21 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./seller-options.component.scss']
 })
 export class SellerOptionsComponent implements OnInit {
-  @Input() opts = [
+  @Input() opts: [
     {
-      img: './../../assets/img/cam.svg',
-      description: 'Começar uma live'
+      img: string,
+      description: string
     },
-    {
-      img: './../../assets/img/add.svg',
-      description: 'Cadastrar produtos'
-    }
   ];
+  @Output() action = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  act(action: string) {
+    this.action.emit(action);
   }
 
 }

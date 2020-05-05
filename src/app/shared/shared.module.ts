@@ -12,6 +12,7 @@ import { StepperComponent } from './stepper/stepper.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignInService } from './services/sign-in/sign-in.service';
 import { SellerOptionsComponent } from './seller-options/seller-options.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SellerOptionsComponent } from './seller-options/seller-options.componen
   imports: [
     FontAwesomeModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   exports: [
     LiveComponent,
@@ -41,7 +43,8 @@ import { SellerOptionsComponent } from './seller-options/seller-options.componen
     ReactiveFormsModule,
     LogoComponent,
     StepperComponent,
-    SellerOptionsComponent
+    SellerOptionsComponent,
+    CommonModule
   ],
   providers: [
     SignInService
