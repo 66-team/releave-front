@@ -1,0 +1,8 @@
+<div optionWrapper *ngIf="opts.length > 0">
+    <ng-container *ngFor="let opt of opts; trackBy">
+        <figure (click)="act(opt.action)">
+            <img [src]="opt.img" alt="">
+            <figcaption>{{ opt.description }}</figcaption>
+        </figure>
+    </ng-container>
+</div>

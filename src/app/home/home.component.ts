@@ -13,27 +13,40 @@ export class HomeComponent implements OnInit {
     right: faChevronCircleRight,
     left: faChevronCircleLeft
   };
+  optList = [
+    {
+      img: './../../assets/img/cam.svg',
+      description: 'Começar uma live',
+      action: 'live'
+    },
+    {
+      img: './../../assets/img/add.svg',
+      description: 'Cadastrar produtos',
+      action: 'addProd'
+    }
+  ];
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     const swiper = new Swiper('.swiper-container', {
-      direction: 'horizontal',
-      slidesPerView: 1.5,
+      slidesPerView: 1,
       loop: false,
-      initialSlide: 1,
       spaceBetween: 30,
       centeredSlides: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
-      scrollbar: false
     });
   }
 
   selectLive() {
     this.router.navigate(['user']);
+  }
+
+  toolChoose(event) {
+    console.log(event);
   }
 
 }

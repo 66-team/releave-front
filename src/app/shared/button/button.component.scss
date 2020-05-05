@@ -2,10 +2,11 @@
 
 button{
     padding: 1rem 3rem;
+    height: 3.5rem;
     width: 100%;
     background-color: map-get($colors, primary);
     border: none;
-    border-radius: .5rem;
+    border-radius: 2.4rem;
     color: map-get($colors, secondary);
     display: flex;
     justify-content: space-around;
@@ -18,5 +19,19 @@ button{
     }
     fa-icon{
         color: map-get($colors, secondary);
+    }
+}
+:host{
+    width: 100%;
+    &[color="primary"] {
+        button{
+            background-color: map-get($colors, btnPrimary);
+        }
+    }
+    &[color="secondary"] {
+        button{
+            background-color: map-get($colors, secondary);
+            color: map-get($colors, text);
+        }
     }
 }

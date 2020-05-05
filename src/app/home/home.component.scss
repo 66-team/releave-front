@@ -1,18 +1,13 @@
 @import './../../assets/scss/colors.scss';
 
 section{
-    margin-top: 10rem;
-    h1, h2{
-        margin: 0;
-        padding-left: 5rem;
-        color: map-get($colors, primary);
-        padding-bottom: 2rem;
-    }
-    h1{
-        font-size: 5rem;
-    }
+    padding: 10rem 5rem;
+    background: map-get($colors, background);
     h2{
-        font-size: 2.5rem;
+        margin: 0;
+        color: map-get($colors, secondary);
+        font-size: 1.8rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -26,23 +21,13 @@ section{
     align-items: center;
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
-    display: none;
-}
-
-.swiper-slide.swiper-slide-prev, .swiper-slide.swiper-slide-next{
-    height: 403px;
-}
-
 .swiper-slide{
     height: 503px;
     min-height: 100%;
 }
 
-fa-icon{
-    font-size: 5rem;
-    padding: 0 5rem;
-    color: map-get($colors, secondary);
+.swiper-pagination-bullet {
+    background: #fff!important;
 }
 
 [link] {
@@ -53,4 +38,8 @@ fa-icon{
     width: 100%;
     height: 100%;
     z-index: 999;
+}
+
+[seller] {
+    margin-top: 1rem;
 }

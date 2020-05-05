@@ -1,22 +1,6 @@
-<header>
+<header *ngIf="isHeader">
     <div menu>
-        <img src="./../../assets/img/ReleaveIconeBranco.svg" alt="">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">Início</a>
-                </li>
-                <li>
-                    <a href="">Categorias</a>
-                </li>
-                <li>
-                    <a href="">Login</a>
-                </li>
-                <li>
-                    <a href="">Registrar-se</a>
-                </li>
-            </ul>
-        </nav>
+        <img src="../../assets/img/logo-horizontal.svg" alt="">
     </div>
     <div hamburger (click)="toggle()" [ngClass]="{'open': isOpen}">
         <div bar="1"></div>
@@ -24,14 +8,41 @@
         <div bar="3"></div>
     </div>
 </header>
-<div subMenu *ngIf="isOpen">
+<div subMenu [ngClass]="{'open': isOpen}">
+    <img src="./../../assets/img/logo-vertical.svg" alt="">
     <nav>
         <ul>
             <li>
-                <a href="">Início</a>
+                <a href="">Loja</a>
             </li>
             <li>
-                <a href="">Categorias</a>
+                <a href="">Perfil</a>
+            </li>
+            <li>
+                <a href="">Produtos salvos</a>
+            </li>
+            <li>
+                <a href="">Meus cupons</a>
+            </li>
+            <li>
+                <a href="">Meus pedidos</a>
+            </li>
+            <li>
+                <a href="">Minhas Lives</a>
+            </li>
+            <li>
+                <a href="">Meus Produtos</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">Configurações</a>
+            </li>
+            <li>
+                <a href="">Notificações</a>
+            </li>
+            <li>
+                <a href="">Sair</a>
             </li>
         </ul>
     </nav>

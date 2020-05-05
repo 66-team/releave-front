@@ -1,6 +1,5 @@
 <section>
-    <h1>A experiência da loja física no mundo virtual.</h1>
-    <h2>Escolha a loja, converse com o vendedor ao vivo e compre sem sair de casa.</h2>
+    <h2>Principais Eventos ao Vivo</h2>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -10,9 +9,14 @@
             </div>
             <div class="swiper-slide">
                 <app-live [url]="'https://www.youtube.com/embed/j5VbNJVplFk?controls=0'"></app-live>
+                <app-notification></app-notification>
+                <a link [routerLink]="['user']"></a>
             </div>
         </div>
-        <fa-icon [icon]="navigation.right" class="swiper-button-next"></fa-icon>
-        <fa-icon [icon]="navigation.left" class="swiper-button-prev"></fa-icon>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div seller>
+        <app-seller-options [opts]="optList" (action)="toolChoose($event)"></app-seller-options>
     </div>
 </section>

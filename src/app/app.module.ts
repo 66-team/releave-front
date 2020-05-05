@@ -20,7 +20,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HomeComponent } from '../home/home.component';
-import { HeaderComponent } from '../header/header.component';
 import { LiveComponent } from './live/live.component';
 import { SafePipe } from './safe/safe.pipe';
 import { SimpleCardComponent } from './simple-card/simple-card.component';
@@ -10,8 +7,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotificationComponent } from './notification/notification.component';
 import { CInputComponent } from './c-input/c-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { LogoComponent } from './logo/logo.component';
+import { StepperComponent } from './stepper/stepper.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SignInService } from './services/sign-in/sign-in.service';
+import { SellerOptionsComponent } from './seller-options/seller-options.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     SimpleCardComponent,
     ButtonComponent,
     NotificationComponent,
-    CInputComponent
+    CInputComponent,
+    LogoComponent,
+    StepperComponent,
+    SellerOptionsComponent
   ],
   imports: [
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   exports: [
     LiveComponent,
@@ -34,7 +40,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     NotificationComponent,
     CInputComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LogoComponent,
+    StepperComponent,
+    SellerOptionsComponent,
+    CommonModule
+  ],
+  providers: [
+    SignInService
   ]
 })
 export class SharedModule { }

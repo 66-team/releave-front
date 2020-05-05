@@ -1,0 +1,37 @@
+@import './../../assets/scss/colors.scss';
+
+section{
+    width: 100%;
+    background-color: #191A1D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+[btnWrapper] {
+    width: 75%;
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+    @media (min-width: 992px) {
+        width: 40%;
+    }
+    @media (min-width: 1280px) {
+        width: 30%;
+    }
+}
+
+p{
+    text-align: center;
+    color: map-get($colors, secondary);
+    font-size: 1.8rem;
+    a{
+        color: map-get($colors, btnPrimary);
+    }
+}
+
+[btnWrapper] div {
+    margin-top: 1.6rem;
+}

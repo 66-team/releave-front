@@ -1,1 +1,16 @@
-<p>sign-up works!</p>
+<section>
+    <app-logo></app-logo>
+    <div btnWrapper>
+        <div>
+            <app-button (act)="customer()" color="primary">
+                Sou cliente
+            </app-button>
+        </div>
+        <div>
+            <app-button (act)="company()" color="secondary">
+                Sou lojista
+            </app-button>
+        </div>
+        <p>Já tem uma conta? <a (click)="signIn()">Faça Login</a></p>
+    </div>
+</section>
